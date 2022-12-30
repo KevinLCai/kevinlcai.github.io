@@ -94,22 +94,69 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-
-
 /* Center the text for each section */
 section {
   text-align: center;
   padding: 20px;
-  height: 100vh;
+  
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+section#about {
+  height: 40vh;
+}
+
+section#timeline {
+  height: 60vh;
+}
+
+section#projects {
+  height: 200vh;
+}
+
+section#contact {
+  height: 100vh;
+}
+
+
 /* scroll behaviour */
 .App {
   scroll-behavior: smooth;
 }
+
+/* about me section */
+#about-description {
+  padding: 100px;
+  padding-top: 0px;
+}
+
+.hidden {
+  display: none; /* Hide the element */
+}
+
+.black-button {
+  background-color: #000; /* Set the background color of the button to black */
+  border: 2px solid #fff; /* Add a white border to the button */
+  border-radius: 4px; /* Round the corners of the button */
+}
+
+.black-button:hover {
+  background-color: #333; /* Change the background color of the button on hover */
+  border-color: #6dd5ed; /* Change the border color of the button on hover */
+}
+
+.black-button {
+  background-color: #000; /* Set the background color of the button to black */
+  border: 2px solid #fff; /* Add a white border to the button */
+  border-radius: 4px; /* Round the corners of the button */
+  padding: 10px 20px; /* Add some padding to the button */
+}
+
+/* #div1 {
+  display: block;
+} */
 
 /* timeline */
 
@@ -135,6 +182,9 @@ section#timeline h2 {
 .timeline-event {
   display: flex;
   align-items: flex-start;
+  border-bottom: 2px solid #00FFFF; /* Add a cyan blue border to the bottom of the element */
+  margin-top: 50px; /* Add some space between the border and the previous timeline event */
+  
 }
 
 .timeline-year,
