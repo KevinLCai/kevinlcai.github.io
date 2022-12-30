@@ -112,6 +112,12 @@ section {
 }
 
 /* timeline */
+
+section#timeline h2 {
+  text-align: center;
+  margin-bottom: 20px; /* add some vertical space between the title and the timeline container */
+}
+
 .timeline-container {
   width: 800px; /* Set the width of the timeline */
   height: 500px; /* Set the height of the timeline */
@@ -133,9 +139,16 @@ section {
 
 .timeline-year,
 .timeline-location,
-.timeline-description {
+.timeline-occupation {
   width: 300px;
   margin-bottom: 50px;
+}
+
+.timeline-event {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create as many columns as needed, with a minimum width of 200px and a maximum width of 1fr */
+  grid-template-rows: 1fr 1fr; /* Create two rows */
+  grid-gap: 20px; /* Add a gap between the grid items */
 }
 
 /* Style the education section */

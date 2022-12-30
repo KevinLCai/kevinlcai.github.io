@@ -3,7 +3,7 @@ import './App.css';
 import kev from './imgs/kev-5.jpeg';
 import UCL from './imgs/UCL_logo.png';
 import Dartmouth from './imgs/Dartmouth_logo.jpeg';
-import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaBriefcase } from 'react-icons/fa';
 
 const projectStyle = {
   display: 'grid',
@@ -16,16 +16,24 @@ function TimelineEvent(props) {
   return (
     <div className="timeline-event">
       <div className="timeline-year">
+        <FaCalendarAlt style={{ color: 'blue' }} />
         <h3>{props.year}</h3>
       </div>
       <div className="timeline-location">
+        <FaMapMarkerAlt style={{ color: 'blue' }} />
         <h3>{props.location}</h3>
       </div>
-      <div className="timeline-description">
+      <div className="timeline-occupation">
+        <FaBriefcase style={{ color: 'blue' }} />
         <h3>{props.occupation}</h3>
-        <p>
-          {props.description}
-        </p>
+      </div>
+      <div className="timeline-image-description">
+        <div className="timeline-image">
+          <p>{props.image}</p>
+        </div>
+        <div className="timeline-description">
+          <p>{props.description}</p>
+        </div>
       </div>
     </div>
   )
@@ -42,19 +50,19 @@ const Contact = () => {
   return (
     <div className="contact" style={contactStyle}>
       <div>
-        <a href="[your GitHub profile URL]"><FaGithub style={{ fontSize: '48px' }} /></a>
+        <a href="https://github.com/KevinLCai"><FaGithub style={{ fontSize: '48px' }} /></a>
         <p>GitHub</p>
       </div>
       <div>
-        <a href="[your LinkedIn profile URL]"><FaLinkedin style={{ fontSize: '48px' }} /></a>
+        <a href="https://www.linkedin.com/in/kevinlcai/"><FaLinkedin style={{ fontSize: '48px' }} /></a>
         <p>LinkedIn</p>
       </div>
       <div>
-        <a href="[your email address]"><FaEnvelope style={{ fontSize: '48px' }} /></a>
+        <a href="KevinLCai@Outlook.com"><FaEnvelope style={{ fontSize: '48px' }} /></a>
         <p>Email</p>
       </div>
       <div>
-        <a href="[your resume URL]"><FaRegFileAlt style={{ fontSize: '48px' }} /></a>
+        <a href="https://github.com/KevinLCai/CV"><FaRegFileAlt style={{ fontSize: '48px' }} /></a>
         <p>Resume</p>
       </div>
     </div>
@@ -73,14 +81,15 @@ navbarLinks.forEach((link) => {
 });
 
 function App() {
+
   return (
     <div className="App">
       <nav>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About Me</a>
+        <a href="#timeline">My Journey</a>
+        <a href="#projects">My Projects</a>
+        <a href="#contact">Contact Me</a>
       </nav>
       <header className="App-header" id="home">
         <div className="header-content">
@@ -104,62 +113,28 @@ function App() {
         </section>
         <section id="timeline">
           <div className="timeline-container">
-            {/* <div className="timeline" style={{ height: '100vh', overflowY: 'scroll' }}>
-              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
-                <h3>Graduate Software Engineer @ Macquarie Group</h3>
-                <p>
-                  [Brief description of event 1]
-                </p>
-              </div>
-              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
-                <h3>Study Abroad - Dartmouth College: Hanover, NH, USA</h3>
-                <p>
-                  [Brief description of event 2]
-                </p>
-              </div>
-            </div> */}
-            <TimelineEvent year="Year 1" location="London" occupation="Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
-            <TimelineEvent year="Year 1" location="London" occupation="Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
-            <TimelineEvent year="Year 1" location="London" occupation="Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
-            
-          </div>
-        </section>
-        <section id="education">
-          <div className="section-content">
-            <h2>Education</h2>
-            <div className="degrees">
-              <div className="degree">
-                <img src={UCL} alt="Degree 1"></img>
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p>University of XYZ</p>
-                <p>September 2015 - June 2019</p>
-              </div>
-              <div className="degree">
-                <img src={Dartmouth} alt="Degree 1"></img>
-                <h3>Master of Science in Computer Science</h3>
-                <p>University of ABC</p>
-                <p>September 2019 - June 2021</p>
-              </div>
-            </div>
+            <TimelineEvent year="Aug 2022 - Present" location="London" occupation="Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
+            <TimelineEvent year="Sep 2021 - July 2022" location="Hanover (NH), USA" occupation="Student" description="Study abroad programme at Dartmouth College"></TimelineEvent>
+            <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" description="L101 Economics with a year abroad"></TimelineEvent>
           </div>
         </section>
         <section id="projects" style={projectStyle}>
           <div className="project">
-            <h3>Project 1</h3>
+            <h3>DeFi Trading Bot</h3>
             <p>
-              [Brief description of project 1]
+              Automated DeFi and CeFi trading bot using a variety of strategies: Yield Farming, Triangular Flashloan Arbitrage, Momentum and Carry Strategies.
             </p>
           </div>
           <div className="project">
-            <h3>Project 2</h3>
+            <h3>Fractional NFT Marketplace</h3>
             <p>
-              [Brief description of project 2]
+              Developing a Minimum Viable Product (MVP) for a business venture aiming to bring liquidity to NFT marketplaces.
             </p>
           </div>
         </section>
         <section id="contact">
           <div className="section-content">
-            <h2>Contact</h2>
+            <h2>Contact Me:</h2>
             <Contact />
           </div>
         </section>
