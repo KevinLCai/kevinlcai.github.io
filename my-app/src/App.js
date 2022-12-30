@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import kev from './imgs/kev-5.jpeg';
+import UCL from './imgs/UCL_logo.png';
+import Dartmouth from './imgs/Dartmouth_logo.jpeg';
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt } from 'react-icons/fa';
 
 const projectStyle = {
@@ -10,6 +12,24 @@ const projectStyle = {
   gridGap: '20px', // Add a gap between the grid items
 };
 
+function TimelineEvent(props) {
+  return (
+    <div className="timeline-event">
+      <div className="timeline-year">
+        <h3>{props.year}</h3>
+      </div>
+      <div className="timeline-location">
+        <h3>{props.location}</h3>
+      </div>
+      <div className="timeline-description">
+        <h3>{props.occupation}</h3>
+        <p>
+          {props.description}
+        </p>
+      </div>
+    </div>
+  )
+}
 
 const Contact = () => {
   const contactStyle = {
@@ -73,59 +93,55 @@ function App() {
         </div>
       </header>
       <main>
-        <section id="about">
+        <section id="about" >
           <div className="section-content">
             <h2>About Me</h2>
             <p>
-              Hello! My name is [Your Name] and I am a software engineer. I have experience in [list of technologies or programming languages you know].
+              Hi, my name is Kevin and I am a software engineer working in the City of London.
             </p>
           </div>
           <div/>
         </section>
         <section id="timeline">
           <div className="timeline-container">
-            <div className="timeline" style={{ height: '100vh', overflowY: 'scroll' }}>
+            {/* <div className="timeline" style={{ height: '100vh', overflowY: 'scroll' }}>
               <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
-                <h3>Year 1</h3>
+                <h3>Graduate Software Engineer @ Macquarie Group</h3>
                 <p>
                   [Brief description of event 1]
                 </p>
               </div>
               <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
-                <h3>Year 2</h3>
+                <h3>Study Abroad - Dartmouth College: Hanover, NH, USA</h3>
                 <p>
                   [Brief description of event 2]
                 </p>
               </div>
-              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
-                <h3>Year 3</h3>
-                <p>
-                  [Brief description of event 3]
-                </p>
-              </div>
-              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
-                <h3>Year 4</h3>
-                <p>
-                  [Brief description of event 4]
-                </p>
-              </div>
-              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
-                <h3>Year 5</h3>
-                <p>
-                  [Brief description of event 5]
-                </p>
-              </div>
-            </div>
+            </div> */}
+            <TimelineEvent year="Year 1" location="London" occupation="Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
+            <TimelineEvent year="Year 1" location="London" occupation="Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
+            <TimelineEvent year="Year 1" location="London" occupation="Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
+            
           </div>
         </section>
         <section id="education">
           <div className="section-content">
             <h2>Education</h2>
-            <p>
-              Education
-            </p>
+            <div className="degrees">
+              <div className="degree">
+                <img src={UCL} alt="Degree 1"></img>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of XYZ</p>
+                <p>September 2015 - June 2019</p>
+              </div>
+              <div className="degree">
+                <img src={Dartmouth} alt="Degree 1"></img>
+                <h3>Master of Science in Computer Science</h3>
+                <p>University of ABC</p>
+                <p>September 2019 - June 2021</p>
+              </div>
+            </div>
           </div>
-          <div/>
         </section>
         <section id="projects" style={projectStyle}>
           <div className="project">
