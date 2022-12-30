@@ -1,75 +1,78 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import kev from './imgs/kev-5.jpeg'; // import your image file
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="your-image-url-here.jpg" alt="Your Name" />
-        <h1>Your Name</h1>
-        <h2>Software Engineer</h2>
-      </header>
       <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
+      <header className="App-header">
+        <div className="header-content">
+          <div className="header-text">
+            <h1>Your Name</h1>
+            <p>Software Engineer</p>
+          </div>
+          <img src={kev} alt="logo" />
+        </div>
+      </header>
       <main>
         <section id="about">
-          <h2>About</h2>
-          <p>Write a brief introduction about yourself and your career as a software engineer.</p>
-        </section>
-        <section id="projects">
-          <h2>Projects</h2>
-          <h3>Project 1</h3>
-          <p>Write a brief description of your first project and its relevant details.</p>
-          <h3>Project 2</h3>
-          <p>Write a brief description of your second project and its relevant details.</p>
-          {/* Add additional project sections as needed */}
-        </section>
-        <section id="experience">
-          <h2>Experience</h2>
-          <h3>Software Engineer, Company 1</h3>
-          <p>Write a brief description of your experience as a software engineer at Company 1.</p>
-          <h3>Software Engineer, Company 2</h3>
-          <p>Write a brief description of your experience as a software engineer at Company 2.</p>
-          {/* Add additional experience sections as needed */}
+          <h2>About Me</h2>
+          <p>
+            Hello! My name is [Your Name] and I am a software engineer. I have experience in [list of technologies or programming languages you know].
+          </p>
         </section>
         <section id="education">
           <h2>Education</h2>
-          <h3>Degree, Institution</h3>
-          <p>Write a brief description of your degree and the institution you received it from.</p>
-          {/* Add additional education sections as needed */}
-        </section>
-        <section id="skills">
-          <h2>Skills</h2>
           <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-            {/* Add additional skills as needed */}
+            <li>
+              <h3>Degree 1</h3>
+              <p>
+                [Brief description of degree 1]
+              </p>
+            </li>
+            <li>
+              <h3>Degree 2</h3>
+              <p>
+                [Brief description of degree 2]
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <ul>
+            <li>
+              <h3>Project 1</h3>
+              <p>
+                [Brief description of project 1]
+              </p>
+            </li>
+            <li>
+              <h3>Project 2</h3>
+              <p>
+                [Brief description of project 2]
+              </p>
+            </li>
           </ul>
         </section>
         <section id="contact">
           <h2>Contact</h2>
-          <p>You can contact me at:</p>
-          <ul>
-            <li>Email: yourname@email.com</li>
-            <li>Phone: 555-555-5555</li>
-            <li>LinkedIn: linkedin.com/in/yourname</li>
-            {/* Add additional contact information as needed */}
-          </ul>
+          <p>
+            You can reach me at [your email address] or through my social media links:
+            <ul>
+              <li><a href="[your LinkedIn profile URL]">LinkedIn</a></li>
+              <li><a href="[your Twitter handle]">Twitter</a></li>
+              <li><a href="[your GitHub profile URL]">GitHub</a></li>
+            </ul>
+          </p>
         </section>
       </main>
-      <footer>
-        <p>Copyright Your Name 2022</p>
-      </footer>
     </div>
   );
 }

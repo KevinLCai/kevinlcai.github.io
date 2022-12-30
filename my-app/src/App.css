@@ -1,67 +1,24 @@
-.App {
-  text-align: center;
+/* Import a font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Use the imported font for the entire website */
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-nav li {
-  float: left;
-}
-
-nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a:hover {
-  background-color: #111;
-}
-
-section {
-  padding: 20px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+/* Style the navbar */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #333;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 20px;
   box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 nav ul {
@@ -72,18 +29,68 @@ nav li {
   margin: 0 10px;
 }
 
-nav a:hover {
-  background-color: #444;
-  color: #61dafb;
-}
-
 nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
   transition: all 0.3s ease;
 }
 
-.App-header img {
+nav a:hover {
+  color: #6dd5ed;
+}
+
+/* Style the header */
+.App-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh; /* Make the header take up the entire page */
+  padding: 50px 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-text {
+  margin-right: 20px;
+}
+
+.header-content img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   margin-bottom: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+
+
+/* Center the text for each section */
+section {
+  text-align: center;
+}
+
+/* Make each section take up the whole page */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
