@@ -40,6 +40,17 @@ const Contact = () => {
   );
 };
 
+const navbarLinks = document.querySelectorAll('nav a');
+
+navbarLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the default link behavior
+    const targetId = event.target.getAttribute('href'); // Get the target section's id
+    const targetSection = document.querySelector(targetId); // Get the target section element
+    targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target section smoothly
+  });
+});
+
 function App() {
   return (
     <div className="App">
