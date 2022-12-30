@@ -1,9 +1,18 @@
 /* Import a font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 /* Use the imported font for the entire website */
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* style entire background */
+body {
+  background-color: #333; 
+}
+/* change font to cyan */
+* {
+  color: #00FFFF;
 }
 
 /* Style the navbar */
@@ -17,7 +26,7 @@ nav {
   justify-content: space-between;
   padding: 20px;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -30,7 +39,7 @@ nav li {
 }
 
 nav a {
-  color: #333;
+  color: #00FFFF;
   text-decoration: none;
   font-size: 1.2em;
   transition: all 0.3s ease;
@@ -98,4 +107,47 @@ section {
 /* scroll behaviour */
 .App {
   scroll-behavior: smooth;
+}
+
+/* timeline */
+.timeline-container {
+  width: 800px; /* Set the width of the timeline */
+  height: 500px; /* Set the height of the timeline */
+  margin: 0 auto; /* Center the timeline horizontally */
+}
+
+.timeline {
+  display: flex; /* Enable flexbox layout for the timeline */
+  align-items: flex-start; /* Align the timeline events to the top of the timeline */
+  height: 100%; /* Make the timeline take up the entire height of the container */
+  flex-direction: column; /* Arrange the timeline events in a column */
+  position: relative; /* Enable positioning for the timeline */
+}
+
+.timeline-event {
+  position: relative; /* Enable positioning for the timeline event */
+  left: 50%; /* Center the timeline event horizontally */
+  top: 0; /* Align the timeline event to the top */
+  transform: translate(-50%, 0); /* Center the timeline event horizontally */
+  width: 150px; /* Set the width of the timeline event */
+  height: 150px; /* Set the height of the timeline event */
+  background-color: #fff; /* Set the background color of the timeline event */
+  border-radius: 10px; /* Round the corners of the timeline event */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Add a shadow to the timeline event */
+  display: flex; /* Enable flexbox layout for the timeline event */
+  align-items: center; /* Center the content of the timeline event vertically */
+  justify-content: center; /* Center the content of the timeline event horizontally */
+  flex-direction: column; /* Arrange the content of the timeline event in a column */
+  text-align: center; /* Center the text of the timeline event */
+}
+
+.timeline-event h3 {
+  font-size: 1.2em; /* Set the font size of the event title */
+  margin-bottom: 10px; /* Add a margin below the event title */
+  color: #333; /* Set the color of the event title */
+}
+
+.timeline-event p {
+  font-size: 1em; /* Set the font size of the event description */
+  color: #555; /* Set the color of the event description */
 }
