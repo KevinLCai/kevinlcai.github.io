@@ -8,7 +8,9 @@
 
 /* style entire background */
 body {
-  background-color: #333; 
+  position: relative;
+  background-image: url('./imgs/blockchainbackground.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./imgs/blockchainbackground.jpeg'); 
 }
 /* change font to cyan */
 * {

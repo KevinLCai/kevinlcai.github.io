@@ -10,6 +10,7 @@ const projectStyle = {
   gridGap: '20px', // Add a gap between the grid items
 };
 
+
 const Contact = () => {
   const contactStyle = {
     display: 'grid',
@@ -66,6 +67,7 @@ function App() {
           <div className="header-text">
             <h1>Kevin Cai</h1>
             <p>Software Engineer</p>
+            <p>London, UK</p>
           </div>
           <img src={kev} alt="logo" />
         </div>
