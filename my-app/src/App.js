@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import kev from './imgs/kev-5.jpeg';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt } from 'react-icons/fa';
 
 const projectStyle = {
   display: 'grid',
@@ -13,19 +13,29 @@ const projectStyle = {
 const Contact = () => {
   const contactStyle = {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr', // Create three columns
+    gridTemplateColumns: '1fr 1fr', // Create two columns
     gridTemplateRows: '1fr 1fr', // Create two rows
     gridGap: '20px', // Add a gap between the grid items
   };
 
   return (
     <div className="contact" style={contactStyle}>
-      <a href="[your GitHub profile URL]"><FaGithub style={{ fontSize: '48px' }} /></a>
-      <a href="[your LinkedIn profile URL]"><FaLinkedin style={{ fontSize: '48px' }} /></a>
-      <a href="[your email address]"><FaEnvelope style={{ fontSize: '48px' }} /></a>
-      <p>GitHub</p>
-      <p>LinkedIn</p>
-      <p>Email</p>
+      <div>
+        <a href="[your GitHub profile URL]"><FaGithub style={{ fontSize: '48px' }} /></a>
+        <p>GitHub</p>
+      </div>
+      <div>
+        <a href="[your LinkedIn profile URL]"><FaLinkedin style={{ fontSize: '48px' }} /></a>
+        <p>LinkedIn</p>
+      </div>
+      <div>
+        <a href="[your email address]"><FaEnvelope style={{ fontSize: '48px' }} /></a>
+        <p>Email</p>
+      </div>
+      <div>
+        <a href="[your resume URL]"><FaRegFileAlt style={{ fontSize: '48px' }} /></a>
+        <p>Resume</p>
+      </div>
     </div>
   );
 };
@@ -61,32 +71,32 @@ function App() {
         </section>
         <section id="timeline">
           <div className="timeline-container">
-            <div className="timeline">
-              <div className="timeline-event">
+            <div className="timeline" style={{ height: '100vh', overflowY: 'scroll' }}>
+              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
                 <h3>Year 1</h3>
                 <p>
                   [Brief description of event 1]
                 </p>
               </div>
-              <div className="timeline-event">
+              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
                 <h3>Year 2</h3>
                 <p>
                   [Brief description of event 2]
                 </p>
               </div>
-              <div className="timeline-event">
+              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
                 <h3>Year 3</h3>
                 <p>
                   [Brief description of event 3]
                 </p>
               </div>
-              <div className="timeline-event">
+              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
                 <h3>Year 4</h3>
                 <p>
                   [Brief description of event 4]
                 </p>
               </div>
-              <div className="timeline-event">
+              <div className="timeline-event" style={{ width: '300px', marginBottom: '50px' }}>
                 <h3>Year 5</h3>
                 <p>
                   [Brief description of event 5]
