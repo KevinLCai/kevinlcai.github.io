@@ -105,6 +105,9 @@ section {
 }
 
 section#about {
+  text-align: center;
+  padding: 20px;
+  margin: auto; /* center the element */
   height: 40vh;
 }
 

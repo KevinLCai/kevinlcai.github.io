@@ -100,12 +100,24 @@ const Contact = () => {
 
 const navbarLinks = document.querySelectorAll('nav a');
 
+const offsets = new Map([
+  ['#about', -(window.innerHeight * 0.3)],
+  ['#timeline', + (window.innerHeight * 0.1)],
+  ['#projects', + (window.innerHeight * 0.5)],
+  ['#contact', 0],
+]);
+
 navbarLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent the default link behavior
     const targetId = event.target.getAttribute('href'); // Get the target section's id
     const targetSection = document.querySelector(targetId); // Get the target section element
-    targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target section smoothly
+    let offset = offsets.get(targetId) || 0; // Get the offset value for the target section from the map, or use 0 if no value is found
+    // Scroll to the top of the target section with the specified offset smoothly
+    window.scrollTo({
+      top: targetSection.offsetTop + offset,
+      behavior: 'smooth',
+    });
   });
 });
 
