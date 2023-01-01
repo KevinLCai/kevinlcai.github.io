@@ -109,7 +109,7 @@ section#about {
 }
 
 section#timeline {
-  height: 60vh;
+  height: 100vh;
 }
 
 section#projects {
@@ -117,7 +117,8 @@ section#projects {
 }
 
 section#contact {
-  height: 100vh;
+  height: 0vh;
+  padding-bottom: 50vh;
 }
 
 
