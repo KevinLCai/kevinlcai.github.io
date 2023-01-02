@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import kev from './imgs/kev-5.jpeg';
-import UCL from './imgs/UCL_logo.png';
+import UCL from './imgs/UCL_Logo.jpeg';
 import Dartmouth from './imgs/Dartmouth_logo.jpeg';
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaBriefcase } from 'react-icons/fa';
 
 const projectStyle = {
   display: 'grid',
   gridTemplateColumns: '1fr 1fr', // Create two columns
-  gridTemplateRows: '1fr', // Create one row
+  gridTemplateRows: '2fr', // Create one row
   gridGap: '20px', // Add a gap between the grid items
 };
 
@@ -58,7 +58,7 @@ function TimelineEvent(props) {
       </div>
       <div className="timeline-image-description">
         <div className="timeline-image">
-          <p>{props.image}</p>
+          <img src={props.image} alt="timeline event image" />
         </div>
         <div className="timeline-description">
           <p>{props.description}</p>
@@ -101,7 +101,7 @@ const Contact = () => {
 const navbarLinks = document.querySelectorAll('nav a');
 
 const offsets = new Map([
-  ['#about', -(window.innerHeight * 0.3)],
+  ['#about', - (window.innerHeight * 0.3)],
   ['#timeline', + (window.innerHeight * 0.1)],
   ['#projects', + (window.innerHeight * 0.5)],
   ['#contact', 0],
@@ -147,11 +147,11 @@ function App() {
           <div className="section-content">
           <h2>About Me</h2>
   <div>
-    <button id="button1" class="black-button">Background</button>
-    <button id="button2" class="black-button">Interests</button>
-    <button id="button3" class="black-button">Skills</button>
+    <button id="button1" className="black-button">Background</button>
+    <button id="button2" className="black-button">Interests</button>
+    <button id="button3" className="black-button">Skills</button>
   </div>
-  <div id="div1" class="hidden">
+  <div id="div1" className="hidden">
     <div id="about-description">
       <p>
         <b>Hi, my name is Kevin and I am a software engineer working in the City of London within the TradFi Commodities Trading Industry. I work for Macquarie Group within the Quantitative Investment Strategies Technology team where I work closely with Traders and Quants to deliver new business strategies, improve existing systems and put out fires.</b>
@@ -161,7 +161,7 @@ function App() {
       </p>
     </div>
   </div>
-  <div id="div2" class="hidden">
+  <div id="div2" className="hidden">
     <div id="about-description">
       <p>
         <b>I am a strong believer in the power of Blockchain Technologies to create a more equitable and uncorruptable financial system through decentralised finance. Furthermore, this technology will improve data privacy, and eliminate the exploitation of user data.</b>
@@ -184,7 +184,7 @@ function App() {
       </p>
     </div>
   </div>
-  <div id="div3" class="hidden">
+  <div id="div3" className="hidden">
     <div id="about-description">
       <p>
         <b>Technologies:</b>
@@ -202,23 +202,28 @@ function App() {
     </div>
       </div>
         <div/>
+        
         </section>
         <section id="timeline">
           <div className="timeline-container">
+            <div id="timeline-title">
+              <h2>My Journey</h2>
+              <p>My Academic and Professional Journey</p>
+            </div>
             <TimelineEvent year="Aug 2022 - Present" location="London" occupation=" Graduate Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
-            <TimelineEvent year="Sep 2021 - July 2022" location="Hanover (NH), USA" occupation="Student" description="Study abroad at Dartmouth College"></TimelineEvent>
-            <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" description="L101 Economics with a year abroad"></TimelineEvent>
+            <TimelineEvent year="Sep 2021 - July 2022" location="Hanover (NH), USA" occupation="Student" image={Dartmouth} description="Study abroad at Dartmouth College"></TimelineEvent>
+            <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" image={UCL} description="L101 Economics with a year abroad"></TimelineEvent>
           </div>
         </section>
         <section id="projects" style={projectStyle}>
-          <div className="project">
-            <h3>DeFi Trading Bot</h3>
-            <p><b>Technologies:</b> Python, Solidity, Javascript, Ethers.js, React.js, Node.js, AWS - EC2</p>
-            <a href="https://github.com/KevinLCai"><FaGithub style={{ fontSize: '24px' }} /> Source Code</a>
-            <p>
-              Automated DeFi and CeFi trading bot using a variety of strategies: Yield Farming, Triangular Flashloan Arbitrage, Momentum and Carry Strategies.
-            </p>
-            <h3>DeFi strategies:</h3>
+        <div className="project">
+          <h3><u>DeFi Trading Bot</u></h3>
+          <p><b>Technologies:</b> Python, Solidity, Javascript, Ethers.js, React.js, Node.js, AWS - EC2</p>
+          <a href="https://github.com/KevinLCai"><FaGithub style={{ fontSize: '24px' }} /> Source Code</a>
+          <p>
+            Automated DeFi and CeFi trading bot using a variety of strategies: Yield Farming, Triangular Flashloan Arbitrage, Momentum and Carry Strategies.
+          </p>
+          <h3>DeFi strategies:</h3>
             <p>
               Yield Farming:
             </p>
@@ -229,9 +234,9 @@ function App() {
             <p>
               BLABLABLASIDJFGIDSHJFIEUWJH
             </p>
-          </div>
+        </div>
           <div className="project">
-            <h3>Fractional NFT Marketplace</h3>
+            <h3><u>Fractional NFT Marketplace</u></h3>
             <p><b>Technologies:</b> Solidity, Javascript, Ethers.js, React.js, Node.js</p>
             <a href="https://github.com/KevinLCai"><FaGithub style={{ fontSize: '24px' }} /> Source Code</a>
             <p>

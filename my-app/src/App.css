@@ -163,6 +163,10 @@ section#contact {
 } */
 
 /* timeline */
+#timeline-title {
+  border-bottom: 2px solid #00FFFF; /* Add a cyan blue border to the bottom of the element */
+  margin-bottom: 50px;
+}
 
 section#timeline h2 {
   text-align: center;
@@ -187,8 +191,8 @@ section#timeline h2 {
   display: flex;
   align-items: flex-start;
   border-bottom: 2px solid #00FFFF; /* Add a cyan blue border to the bottom of the element */
-  margin-top: 50px; /* Add some space between the border and the previous timeline event */
-  
+  margin-top: 25px; /* Add some space between the border and the previous timeline event */
+  margin-bottom: 50px;
 }
 
 .timeline-year,
@@ -203,6 +207,14 @@ section#timeline h2 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create as many columns as needed, with a minimum width of 200px and a maximum width of 1fr */
   grid-template-rows: 1fr 1fr; /* Create two rows */
   grid-gap: 20px; /* Add a gap between the grid items */
+}
+
+.timeline-image img {
+  width: 100px; /* Set the width of the image to 100px */
+  height: 100px; /* Set the height of the image to 100px */
+  object-fit: cover; /* Scale the image to fit within the given dimensions while maintaining its aspect ratio */
+  border-radius: 50%; /* Round the corners of the image */
+  margin-right: 20px; /* Add some space between the image and the description */
 }
 
 /* Style the education section */
@@ -244,4 +256,13 @@ section#education .degree {
   width: 400px;
   margin: 20px auto;
   text-align: left;
+}
+
+/* projects */
+section#projects .project {
+  margin-bottom: 0;
+}
+
+.project + .project {
+  border-left: 2px solid #00FFFF;
 }
