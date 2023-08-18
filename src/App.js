@@ -154,33 +154,35 @@ function App() {
   <div id="div1" className="hidden">
     <div id="about-description">
       <p>
-        <b>Hi, my name is Kevin and I am a software engineer working in the City of London within the TradFi Commodities Trading Industry. I work for Macquarie Group within the Quantitative Investment Strategies Technology team where I work closely with Traders and Quants to deliver new business strategies, improve existing systems and put out fires.</b>
+        <b>Hello, I'm Kevin, a passionate software engineer based in the heart of London's financial district. With a strong foothold in the dynamic TradFi Commodities Trading Industry, I contribute to transformative projects within the Quantitative Investment Strategies Technology team at Macquarie Group. My role involves collaborating closely with Sales & Trading to devise innovative business strategies, enhance existing systems, and adeptly handle any challenges that arise.</b>
       </p>
       <p>
-        <b>In 2022 I graduated from University College London with a 1st Class Degree in Economics with year abroad. I studied abroad at Dartmouth College in the USA for a year, being able to gain a formal education in Computer Science due to the liberal arts system. The opportunity to experience another country's culture was an incredibly meaningful experience, and I hope to continue to expand my horizons through living abroad again in the future.</b>
+        <b>In 2022, I achieved a 1st Class Degree in Economics from University College London. During my academic journey, I embraced the opportunity for personal and intellectual growth by spending a year at Dartmouth College in the USA. This experience not only broadened my horizons but also enabled me to dive into the world of Computer Science, thanks to the institution's liberal arts education. The cross-cultural exposure was deeply enriching, motivating me to seek out future opportunities to live and work abroad once again.</b>
       </p>
     </div>
   </div>
   <div id="div2" className="hidden">
     <div id="about-description">
       <p>
-        <b>I am a strong believer in the power of Blockchain Technologies to create a more equitable and uncorruptable financial system through decentralised finance. Furthermore, this technology will improve data privacy, and eliminate the exploitation of user data.</b>
+        <b>I'm captivated by Blockchain Technologies, envisioning a fairer financial landscape through decentralized finance. I'm driven to enhance data privacy and combat the misuse of cryptocurrencies by central entities, staying true to the ethos of web3.</b>
       </p>
       <p>
-        <b>It frustrates me to see how cryptocurrency can be used by centralised intermediaries to scam retail investors with rugpulls and multi-billion dollar fraud. This is strictly against the ethos of web3 and pushes innocent people away from this space for all the wrong reasons.</b>
+        <b>Since 2016, I've tracked blockchain's evolution, weathering crypto winters. My background in the space extends to investing, trading, academic research, blockchain development and startup incubation.</b>
       </p>
       <p>
-        <b>I have been following the evolution of this technology since 2016 following the Etherum Classic Hardfork. It has been fascinating to see the industry evolve and to have made it into my second crypto winter.
-          My passions have led me to become a self-taught programmer, learning Python, Solidity and Full-Stack Web Development alongside my full-time studies in Economics.</b>
+        <b>My Economics Thesis delved into blockchain's impact on modern economies, through Decentralized Finance, discussing the regulatory and macroeconomic impact of the technology.</b>
       </p>
       <p>
-        <b>Using my newly developed skills I was able to land a SWE internship within 4 months of writing my first line of code, having the opportunity to write production quality Python. I later went on to write my Economics Thesis modelling the adoption of Blockchain Technologies; discussing the impacts of Decentralised Finance on modern economies.</b>
+        <b>I have experience in pitching products at Dartmouth College - pitching a product for decentralised medical records on Ethereum where I worked alongside 5 other Computer Science majors to develop the application.</b>
       </p>
       <p>
-        <b>Nowadays I like to travel, spend time with friends, play tennis, the guitar and immerse myself in the decentralised web. I constantly strive to improve myself whether that be in my fitness, my relationships or my career.</b>
+        <b>I also pitched for pre-seed funding within the Blockchain Founders Group startup incubator programme to develop a fractionalised NFT marketplace within the web3 gaming space.</b>
       </p>
       <p>
-        <b></b>
+        <b>Beyond FinTech, I'm an enthusiastic traveler, loyal friend, tennis player, and guitarist. I'm committed to personal growth, whether in fitness, relationships, or career advancement.</b>
+      </p>
+      <p>
+        <b>By merging technology and positive change, I aim to contribute to a world with more economic opportunity for everyone.</b>
       </p>
     </div>
   </div>
@@ -196,7 +198,10 @@ function App() {
         <b>Frameworks: </b>Ethers.js, Node.js, React.js
       </p>
       <p>
-        <b>Tools: </b>AWS, Linux, Git, Hardhat
+        <b>Tools: </b>AWS, Linux, Git, Hardhat, ChatGPT, Github CoPilot
+      </p>
+      <p>
+        <b>Certifications: </b>AWS Certified Developer - Associate
       </p>
     </div>
     </div>
