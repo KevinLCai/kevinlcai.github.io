@@ -61,7 +61,7 @@ nav a:hover {
   flex-direction: column;
   text-align: center;
   height: 100vh; /* Make the header take up the entire page */
-  padding: 50px 20px;
+  padding: 5px 20px;
 }
 
 .header-content {
@@ -191,7 +191,7 @@ section#timeline h2 {
   display: flex;
   align-items: flex-start;
   border-bottom: 2px solid #00FFFF; /* Add a cyan blue border to the bottom of the element */
-  margin-top: 25px; /* Add some space between the border and the previous timeline event */
+  margin-top: 50px; /* Add some space between the border and the previous timeline event */
   margin-bottom: 50px;
 }
 
@@ -199,14 +199,14 @@ section#timeline h2 {
 .timeline-location,
 .timeline-occupation {
   width: 300px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .timeline-event {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create as many columns as needed, with a minimum width of 200px and a maximum width of 1fr */
   grid-template-rows: 1fr 1fr; /* Create two rows */
-  grid-gap: 20px; /* Add a gap between the grid items */
+  grid-gap: 10px; /* Add a gap between the grid items */
 }
 
 .timeline-image img {
@@ -214,7 +214,12 @@ section#timeline h2 {
   height: 100px; /* Set the height of the image to 100px */
   object-fit: cover; /* Scale the image to fit within the given dimensions while maintaining its aspect ratio */
   border-radius: 50%; /* Round the corners of the image */
-  margin-right: 20px; /* Add some space between the image and the description */
+  margin-left: 40px; /* Add some space between the image and the description */
+  margin-bottom: 0px;
+}
+
+.timeline-description {
+  margin-left: 40px;
 }
 
 /* Style the education section */

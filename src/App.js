@@ -3,6 +3,7 @@ import './App.css';
 import kev from './imgs/kev-5.jpeg';
 import UCL from './imgs/UCL_Logo.jpeg';
 import Dartmouth from './imgs/Dartmouth_logo.jpeg';
+import Macquarie from './imgs/Macquarie.jpeg'
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaBriefcase } from 'react-icons/fa';
 
 const projectStyle = {
@@ -215,9 +216,9 @@ function App() {
               <h2>My Journey</h2>
               <p>My Academic and Professional Journey</p>
             </div>
-            <TimelineEvent year="Aug 2022 - Present" location="London" occupation=" Graduate Software Engineer" description="[Brief description of event 1]"></TimelineEvent>
+            <TimelineEvent year="Aug 2022 - Present" location="London" occupation="Senior Associate - Software Engineer" image={Macquarie} description="Macquarie Group Grad Programme"></TimelineEvent>
             <TimelineEvent year="Sep 2021 - July 2022" location="Hanover (NH), USA" occupation="Student" image={Dartmouth} description="Study abroad at Dartmouth College"></TimelineEvent>
-            <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" image={UCL} description="L101 Economics with a year abroad"></TimelineEvent>
+            <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" image={UCL} description="UCL Economics with a year abroad"></TimelineEvent>
           </div>
         </section>
         <section id="projects" style={projectStyle}>
