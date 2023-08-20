@@ -6,12 +6,13 @@ import Dartmouth from './imgs/Dartmouth_logo.jpeg';
 import Macquarie from './imgs/Macquarie.jpeg'
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaBriefcase } from 'react-icons/fa';
 import Project from './Project';
+import Dissertation from './imgs/Dissertation.png'
 
 
 
 const projects = [
   {
-    image: Macquarie,
+    // image: Macquarie,
     title: 'Cryptocurrency Trading System',
     technologies: 'Python - Flask & CCXT, AWS, React.js, Axios.js, Ethers.js',
     githubLink: 'https://github.com/KevinLCai/DeFi-CeFi',
@@ -53,7 +54,7 @@ const projects = [
     imagePosition: 'right',
   },
   {
-    image: Macquarie,
+    // image: Macquarie,
     title: 'Senior Computer Science Project: Med 3.0',
     technologies: 'Solidity, Ganache, Truffle, Web3.js, Node.js, React.js',
     githubLink: 'https://github.com/KevinLCai/Med3.0',
@@ -65,7 +66,7 @@ const projects = [
     ],
   },
   {
-    image: Macquarie,
+    image: Dissertation,
     title: 'Economics Thesis - Finance 2.0: How and when will blockchain technologies revolutionise financial markets',
     technologies: 'Mathematica, LaTeX',
     githubLink: 'https://github.com/KevinLCai/Economics_Dissertation',
