@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6705834d.css",
+    "main.js": "/static/js/main.923a55ac.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/kev-5.jpeg": "/static/media/kev-5.b4cfd611589dd5df4388.jpeg",
+    "static/media/Dissertation.png": "/static/media/Dissertation.a881dd40b9e7ea3dd24b.png",
+    "static/media/Dartmouth_logo.jpeg": "/static/media/Dartmouth_logo.53c84e723107a6aec487.jpeg",
+    "static/media/blockchainbackground.jpeg": "/static/media/blockchainbackground.a8bc43a52af8004596cb.jpeg",
+    "static/media/Macquarie.jpeg": "/static/media/Macquarie.f412ab2be16834e3af10.jpeg",
+    "index.html": "/index.html",
+    "main.6705834d.css.map": "/static/css/main.6705834d.css.map",
+    "main.923a55ac.js.map": "/static/js/main.923a55ac.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6705834d.css",
+    "static/js/main.923a55ac.js"
+  ]
+}
