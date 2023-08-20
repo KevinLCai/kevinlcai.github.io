@@ -14,13 +14,19 @@ const Project = ({ image, title, technologies, githubLink, description, details,
           <h3><u>{title}</u></h3>
           <p><b>Technologies:</b> {technologies}</p>
           <a href={githubLink}><FaGithub style={{ fontSize: '24px' }} /> Source Code</a>
-          <p>
-            {description}
-          </p>
-          <h3>{title} Details</h3>
           {details.map((detail, index) => (
-            <p key={index}>{detail}</p>
-          ))}
+          <div key={index}>
+            {Array.isArray(detail) ? (
+              <ul>
+                {detail.map((subDetail, subIndex) => (
+                  <li key={subIndex}>{subDetail}</li>
+                ))}
+              </ul>
+            ) : (
+              <p><b>{detail}</b></p>
+            )}
+          </div>
+        ))}
         </div>
       </div>
     );

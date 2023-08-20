@@ -12,36 +12,68 @@ import Project from './Project';
 const projects = [
   {
     image: Macquarie,
-    title: 'Project 1 Title',
-    technologies: 'Technology 1, Technology 2',
-    githubLink: 'https://github.com/KevinLCai/project1',
-    description: 'Project 1 description goes here.',
+    title: 'Cryptocurrency Trading System',
+    technologies: 'Python - Flask & CCXT, AWS, React.js, Axios.js, Ethers.js',
+    githubLink: 'https://github.com/KevinLCai/DeFi-CeFi',
+    description: 'DESCRIPTION.',
+    //   '- ',
+    //   '- ',
+    //   ':',
+    //   '- ',
+    //   '',
+    //   '- ',
+   
+    // ],
     details: [
-      'Detail 1: Lorem ipsum dolor sit amet.',
-      'Detail 2: consectetur adipiscing elit.',
+      "CeFi Trading Strategy",
+      [
+        "Ingests candlestick data from a websocket using CCXT as a Binance API wrapper",
+        "Executes a basic momentum trading strategy based off historical prices",
+        "Systematically trades on Binance and sends trade data to REST API to be stored in MySQL database"
+      ],
+      "Frontend",
+      [
+        "React.js frontend, dynamically updating to show new trades that have occurred",
+        "Retrieves trade data through requests to REST API which Queries the MySQL Database",
+      ],
+      "REST API",
+      [
+        "Handles and routes requests between different microservices",
+      ],
+      "MySQL Database",
+      [
+        "Stored trade data in a structured form, that can be queried using SQL",
+      ],
+        // '',
+        // '',
+        // '',
+        // '',
+        // '',
     ],
     imagePosition: 'right',
   },
   {
     image: Macquarie,
-    title: 'Project 1 Title',
-    technologies: 'Technology 1, Technology 2',
-    githubLink: 'https://github.com/KevinLCai/project1',
-    description: 'Project 1 description goes here.',
+    title: 'Senior Computer Science Project: Med 3.0',
+    technologies: 'Solidity, Ganache, Truffle, Web3.js, Node.js, React.js',
+    githubLink: 'https://github.com/KevinLCai/Med3.0',
+    description: 'DESCRIPTION.',
     details: [
-      'Detail 1: Lorem ipsum dolor sit amet.',
-      'Detail 2: consectetur adipiscing elit.',
+      'I pitched my idea for Med3.0 to 90 Ivy League Computer Science Major’s as a part of Dartmouth’s CS98 Senior Design and Implementation Project.',
+      'The aim of this project was to explore the concept of a decentralised medical records system that changes the hand of sensitive data ownership from centralised entities to the patient.',
+      'My role involved developing, testing and deploying the Solidity Smart Contracts to the Ethereum Ropsten Test Network. This involved the use of Solidity, Truffle, Ganache, Web3.js, Chai and Remix IDE.',
     ],
   },
   {
     image: Macquarie,
-    title: 'Project 1 Title',
-    technologies: 'Technology 1, Technology 2',
-    githubLink: 'https://github.com/KevinLCai/project1',
-    description: 'Project 1 description goes here.',
+    title: 'Economics Thesis - Finance 2.0: How and when will blockchain technologies revolutionise financial markets',
+    technologies: 'Mathematica, LaTeX',
+    githubLink: 'https://github.com/KevinLCai/Economics_Dissertation',
+    description: 'DESCRIPTION.',
     details: [
-      'Detail 1: Lorem ipsum dolor sit amet.',
-      'Detail 2: consectetur adipiscing elit.',
+      'I focused my undergraduate dissertation on researching emerging Distributed Ledger Technologies, exploring the game theory behind consensus mechanisms, the properties of a public distributed ledger-based currency and the emergence of Central Bank Digital Currencies (CBDCs).',
+      'I developed a Watts-Strogats Small World Network Model of technological adoption, drawing inspiration from models of Diffusion Theory and Classical Network/Graph Theory to estimate a feasible adoption timeframe for emerging Digital Assets technologies within the UK.',
+      'Lastly, I discussed the possible impacts of Blockchain Technologies on disrupting fields of Law, Healthcare, Education, Politics, and its impact on Economic and Monetary Policy.',
     ],
     imagePosition: 'right',
   },
@@ -259,25 +291,26 @@ function App() {
               <p>My Academic and Professional Journey</p>
             </div>
             <TimelineEvent year="Aug 2022 - Present" location="London" occupation="Senior Associate - Software Engineer" image={Macquarie} description="Macquarie Group Graduate Programme" details={[
-                "Working alongside Sales and Trading - maintaining critical systems for internal and external client, risk and regulatory reports",
+                "Working with Sales and Trading - maintaining critical systems for internal and external client, risk and regulatory reports.",
                 "I’ve led initiatives in Graduate and Intern recruitment - redesigning interview questions and conducting interviews.",
-                "Co-chair of the Graduate Volunteer Network raising over £7500 for the Islington Centre for Refugees and Migrants",
+                "Co-chair of the Graduate Volunteer Network raising over £7500 for the Islington Centre for Refugees and Migrants.",
               ]}
 ></TimelineEvent>
             <TimelineEvent year="Sep 2021 - July 2022" location="Hanover (NH), USA" occupation="Student" image={Dartmouth} description="Study abroad at Dartmouth College" details={[
-                "Studied Computer Science, Quantitative Social Science and Economics",
-                "Senior CS Project - Med 3.0: Pitched and worked in a team of 6 to develop a Decentralised Application on Ethereum",
+                "Studied Computer Science, Quantitative Social Science and Economics.",
+                "Senior CS Project - Med 3.0: Decentralised Medical Records on Ethereum.",
               ]}
 ></TimelineEvent>
             <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" image={UCL} description="UCL Economics with a year abroad" details={[
-                "Economics Research Thesis - Finance 2.0: How and when will blockchain technologies disrupt financial markets",
+                "Graduated with 1st Class Honours Degree.",
+                "Economics Research Thesis - Finance 2.0: How and when will blockchain technologies disrupt financial markets (Mark: 80%).",
               ]}
 ></TimelineEvent>
           </div>
         </section>
         <section id="projects" className="project-container">
           <div id="projects-header">
-            <h2>Projects and Research</h2>
+            <h2>Side Projects and Academic Research</h2>
           </div>
         {projects.map((project, index) => (
           <Project key={index} {...project} />
