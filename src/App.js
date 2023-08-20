@@ -5,13 +5,48 @@ import UCL from './imgs/UCL_Logo.jpeg';
 import Dartmouth from './imgs/Dartmouth_logo.jpeg';
 import Macquarie from './imgs/Macquarie.jpeg'
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaBriefcase } from 'react-icons/fa';
+import Project from './Project';
 
-const projectStyle = {
-  display: 'grid',
-  gridTemplateColumns: '1fr 1fr', // Create two columns
-  gridTemplateRows: '2fr', // Create one row
-  gridGap: '20px', // Add a gap between the grid items
-};
+
+
+const projects = [
+  {
+    image: Macquarie,
+    title: 'Project 1 Title',
+    technologies: 'Technology 1, Technology 2',
+    githubLink: 'https://github.com/KevinLCai/project1',
+    description: 'Project 1 description goes here.',
+    details: [
+      'Detail 1: Lorem ipsum dolor sit amet.',
+      'Detail 2: consectetur adipiscing elit.',
+    ],
+    imagePosition: 'right',
+  },
+  {
+    image: Macquarie,
+    title: 'Project 1 Title',
+    technologies: 'Technology 1, Technology 2',
+    githubLink: 'https://github.com/KevinLCai/project1',
+    description: 'Project 1 description goes here.',
+    details: [
+      'Detail 1: Lorem ipsum dolor sit amet.',
+      'Detail 2: consectetur adipiscing elit.',
+    ],
+  },
+  {
+    image: Macquarie,
+    title: 'Project 1 Title',
+    technologies: 'Technology 1, Technology 2',
+    githubLink: 'https://github.com/KevinLCai/project1',
+    description: 'Project 1 description goes here.',
+    details: [
+      'Detail 1: Lorem ipsum dolor sit amet.',
+      'Detail 2: consectetur adipiscing elit.',
+    ],
+    imagePosition: 'right',
+  },
+  // Add more project objects similarly
+];
 
 function addEventListeners() {
   const button1 = document.getElementById('button1');
@@ -240,44 +275,13 @@ function App() {
 ></TimelineEvent>
           </div>
         </section>
-        <section id="projects" style={projectStyle}>
-        <div className="project">
-          <h3><u>DeFi Trading Bot</u></h3>
-          <p><b>Technologies:</b> Python, Solidity, Javascript, Ethers.js, React.js, Node.js, AWS - EC2</p>
-          <a href="https://github.com/KevinLCai"><FaGithub style={{ fontSize: '24px' }} /> Source Code</a>
-          <p>
-            Automated DeFi and CeFi trading bot using a variety of strategies: Yield Farming, Triangular Flashloan Arbitrage, Momentum and Carry Strategies.
-          </p>
-          <h3>DeFi strategies:</h3>
-            <p>
-              Yield Farming:
-            </p>
-            <p>
-              Flashloan Arbitrage:
-            </p>
-            <h3>CeFi strategies:</h3>
-            <p>
-              BLABLABLASIDJFGIDSHJFIEUWJH
-            </p>
-        </div>
-          <div className="project">
-            <h3><u>Fractional NFT Marketplace</u></h3>
-            <p><b>Technologies:</b> Solidity, Javascript, Ethers.js, React.js, Node.js</p>
-            <a href="https://github.com/KevinLCai"><FaGithub style={{ fontSize: '24px' }} /> Source Code</a>
-            <p>
-              Developing a Minimum Viable Product (MVP) for a business venture aiming to bring liquidity to NFT marketplaces.
-            </p>
-            <h3>Features</h3>
-            <p>
-              Securely lock an ERC721 token within a smart contract.
-            </p>
-            <p>
-              Issuance of ERC20 tokens as fractional shares of a collateralised NFT.
-            </p>
-            <p>
-              Secondary decentralised marketplace to trade token shares.
-            </p>
+        <section id="projects" className="project-container">
+          <div id="projects-header">
+            <h2>Projects and Research</h2>
           </div>
+        {projects.map((project, index) => (
+          <Project key={index} {...project} />
+        ))}
         </section>
         <section id="contact">
           <div className="section-content">
