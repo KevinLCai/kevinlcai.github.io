@@ -65,6 +65,13 @@ function TimelineEvent(props) {
           <p>{props.description}</p>
         </div>
       </div>
+      <div className="timeline-details">
+        <ul>
+          {props.details.map((bulletPoint, index) => (
+            <li key={index}>{bulletPoint}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
@@ -155,7 +162,7 @@ function App() {
   <div id="div1" className="hidden">
     <div id="about-description">
       <p>
-        <b>Hello, I'm Kevin, a passionate software engineer based in the heart of London's financial district. With a strong foothold in the dynamic TradFi Commodities Trading Industry, I contribute to transformative projects within the Quantitative Investment Strategies Technology team at Macquarie Group. My role involves collaborating closely with Sales & Trading to devise innovative business strategies, enhance existing systems, and adeptly handle any challenges that arise.</b>
+        <b>Hello, I'm Kevin, a passionate software engineer based in the heart of London's financial district, working in the TradFi Commodities Trading Industry. I contribute to the systems within Quantitative Investment Strategies Technology at Macquarie Group. My role involves collaborating closely with Sales & Trading to devise technical business strategies, enhance our existing systems, and debugging production issues.</b>
       </p>
       <p>
         <b>In 2022, I achieved a 1st Class Degree in Economics from University College London. During my academic journey, I embraced the opportunity for personal and intellectual growth by spending a year at Dartmouth College in the USA. This experience not only broadened my horizons but also enabled me to dive into the world of Computer Science, thanks to the institution's liberal arts education. The cross-cultural exposure was deeply enriching, motivating me to seek out future opportunities to live and work abroad once again.</b>
@@ -180,7 +187,7 @@ function App() {
         <b>I also pitched for pre-seed funding within the Blockchain Founders Group startup incubator programme to develop a fractionalised NFT marketplace within the web3 gaming space.</b>
       </p>
       <p>
-        <b>Beyond FinTech, I'm an enthusiastic traveler, loyal friend, tennis player, and guitarist. I'm committed to personal growth, whether in fitness, relationships, or career advancement.</b>
+        <b>Beyond FinTech and Decentralised Technologies, I'm an enthusiastic traveler, loyal friend, tennis player, and guitarist. I'm committed to personal growth, whether in fitness, relationships, or career advancement.</b>
       </p>
       <p>
         <b>By merging technology and positive change, I aim to contribute to a world with more economic opportunity for everyone.</b>
@@ -216,9 +223,21 @@ function App() {
               <h2>My Journey</h2>
               <p>My Academic and Professional Journey</p>
             </div>
-            <TimelineEvent year="Aug 2022 - Present" location="London" occupation="Senior Associate - Software Engineer" image={Macquarie} description="Macquarie Group Grad Programme"></TimelineEvent>
-            <TimelineEvent year="Sep 2021 - July 2022" location="Hanover (NH), USA" occupation="Student" image={Dartmouth} description="Study abroad at Dartmouth College"></TimelineEvent>
-            <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" image={UCL} description="UCL Economics with a year abroad"></TimelineEvent>
+            <TimelineEvent year="Aug 2022 - Present" location="London" occupation="Senior Associate - Software Engineer" image={Macquarie} description="Macquarie Group Graduate Programme" details={[
+                "Working alongside Sales and Trading - maintaining critical systems for internal and external client, risk and regulatory reports",
+                "I’ve led initiatives in Graduate and Intern recruitment - redesigning interview questions and conducting interviews.",
+                "Co-chair of the Graduate Volunteer Network raising over £7500 for the Islington Centre for Refugees and Migrants",
+              ]}
+></TimelineEvent>
+            <TimelineEvent year="Sep 2021 - July 2022" location="Hanover (NH), USA" occupation="Student" image={Dartmouth} description="Study abroad at Dartmouth College" details={[
+                "Studied Computer Science, Quantitative Social Science and Economics",
+                "Senior CS Project - Med 3.0: Pitched and worked in a team of 6 to develop a Decentralised Application on Ethereum",
+              ]}
+></TimelineEvent>
+            <TimelineEvent year="Sep 2018 - July 2022" location="London" occupation="Student" image={UCL} description="UCL Economics with a year abroad" details={[
+                "Economics Research Thesis - Finance 2.0: How and when will blockchain technologies disrupt financial markets",
+              ]}
+></TimelineEvent>
           </div>
         </section>
         <section id="projects" style={projectStyle}>
