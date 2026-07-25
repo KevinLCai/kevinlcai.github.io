@@ -45,7 +45,6 @@ header {
   color: var(--muted);
   line-height: 1.6;
   margin: 0 0 56px;
-  max-width: 560px;
 }
 
 h1.name {
